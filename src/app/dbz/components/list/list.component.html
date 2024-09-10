@@ -9,7 +9,7 @@
            let isOdd = odd;
            "
 
-          class="list-group-item "
+          class="list-group-item d-flex justify-content-between align-items-center "
           [ngClass]="{
             'list-group-item-success':isFirst,
             'list-group-item-dark':islast,
@@ -17,8 +17,14 @@
           }">
 
           <span class="text-primary">{{i+1}}.</span>
+
           {{Character.name}} <span>
+
             <strong>Power</strong>
+
           </span> {{Character.power}}
+
+          <button (click)="oneDeleteCharacter(Character.id)" class="btn btn-danger"> x </button>
+
           </li>
       </ul>
